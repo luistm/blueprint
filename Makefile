@@ -9,7 +9,7 @@ export-requirements: ## Exports requirements to a requirements.txt file
 	poetry export --without-hashes --format=requirements.txt > requirements.txt
 
 
-clean:
+clean: ## Resets the development environment to the post clone repository state
 	-rm requirements.txt
 	-poetry env remove python --quiet
 
