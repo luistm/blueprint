@@ -1,7 +1,7 @@
 Feature: Make a cake
 
     As a User,
-    I want to see the recipee for a cake,
+    I want to see the recipe for a cake,
     So i know how to make one
 
     Scenario: Build a cake from a random list of ingredients
