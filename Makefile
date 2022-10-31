@@ -11,5 +11,6 @@ export-requirements: ## Exports requirements to a requirements.txt file
 
 clean:
 	-rm requirements.txt
+	-poetry env remove python --quiet
 
 all: clean dev-setup export-requirements test
