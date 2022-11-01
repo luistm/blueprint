@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "cake-mold"
+name = "cakemold"
 version = "0.0.1"
 description = "Cake Mold is a template to build python projects"
 authors = ["Luís Miranda <luistm@gmail.com>"]
 license = "The Unlicence"
 readme = "README.md"
-packages = [{include = "cake_mold"}]
+packages = [{include = "cakemold"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
