@@ -1,3 +1,6 @@
+[tool.bandit]
+exclude_dirs = ["tests", "features"]
+
 [tool.poetry]
 name = "cakemold"
 version = "0.0.1"
