@@ -11,6 +11,8 @@ build:  ## Builds this project into a package
 export-requirements: ## Exports requirements to a requirements.txt file
 	poetry export --without-hashes --format=requirements.txt > requirements.txt
 
+deps-outdated: ## Shows outdated dependencies
+	poetry show --outdated --only main
 
 clean: ## Resets the development environment to the post clone repository state
 	-rm requirements.txt
