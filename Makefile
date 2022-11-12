@@ -16,7 +16,7 @@ deps-outdated: ## Shows outdated dependencies
 
 clean: ## Resets the development environment to the initial state
 	-rm requirements.txt
-	-rm dist/cake*
+	-rm dist/cakemold*
 	-poetry env remove python --quiet
 
 setup: deps ## Sets up the developement environment
