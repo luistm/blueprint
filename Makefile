@@ -15,6 +15,7 @@ deps-outdated: ## Shows outdated dependencies
 	poetry show --outdated
 
 clean: ## Resets the development environment to the initial state
+	-find . -name "*.pyc" -delete
 	-rm requirements.txt
 	-rm dist/cakemold*
 	-poetry env remove python --quiet
