@@ -1,3 +1,3 @@
-Cake Mold
+# Cake Mold
 
-Cake Mold is a template to build python projects
+Cake Mold is a template to build python projects.
