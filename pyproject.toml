@@ -8,7 +8,7 @@ description = "Cake Mold is a template to build python projects"
 authors = ["Luís Miranda <luistm@gmail.com>"]
 license = "The Unlicence"
 readme = "README.md"
-packages = [{include = "cakemold"}]
+packages = [{include = "cakemold", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
