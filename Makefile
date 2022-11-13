@@ -23,11 +23,13 @@ clean: ## Resets the development environment to the initial state
 setup: deps ## Sets up the developement environment
 	poetry run pre-commit install
 
-build:  ## Builds this project into a package
-	poetry build
+check:
+	poetry run pre-commit run --all
 
 test: ## Runs all the tests
 	poetry run pytest .
 
+build:  ## Builds this project into a package
+	poetry build
 
-all: clean setup build test export-requirements deps-outdated
+all: clean setup check test build export-requirements deps-outdated
