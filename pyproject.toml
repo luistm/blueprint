@@ -1,6 +1,18 @@
 [tool.bandit]
 exclude_dirs = ["tests", "features"]
 
+[tool.black]
+max-line-length = 99
+target-version = ['py310', 'py311']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+ignore_missing_imports = true
+
+
 [tool.poetry]
 name = "cakemold"
 version = "0.0.1"
@@ -12,7 +24,6 @@ packages = [{include = "cakemold", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-
 
 [tool.poetry.group.dev.dependencies]
 bandit = "~1.7.4"
@@ -26,7 +37,6 @@ pre-commit = "~2.20.0"
 pytest = "~7.2.0"
 pytest-xdist = "~3.0.2"
 pytest-bdd = "~6.0.1"
-
 
 [build-system]
 requires = ["poetry-core"]
