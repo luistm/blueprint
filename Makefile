@@ -31,4 +31,4 @@ test: ## Runs all the tests
 build:  ## Builds this project into a package
 	poetry build
 
-all: clean setup check test build export-requirements deps-outdated
+all: clean setup check test build deps-outdated
