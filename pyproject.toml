@@ -24,10 +24,9 @@ packages = [{include = "cakemold", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-bandit = {extras = ["toml"], version = "^1.7.4"}
 
 [tool.poetry.group.dev.dependencies]
-bandit = "~1.7.4"
+bandit = {extras = ["toml"], version = "^1.7.4"}
 behave = "~1.2.6"
 black = "~22.10"
 coverage = "~6.5"
