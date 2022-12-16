@@ -11,6 +11,8 @@ multi_line_output = 3
 
 [tool.mypy]
 ignore_missing_imports = true
+# https://stackoverflow.com/questions/62265366/does-mypy-only-type-check-a-function-if-it-declares-a-return-type
+check_untyped_defs = true
 
 
 [tool.poetry]
