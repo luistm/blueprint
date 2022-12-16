@@ -22,7 +22,7 @@ clean: ## Resets the development environment to the initial state
 setup: deps ## Sets up the developement environment
 	poetry run pre-commit install
 
-check:
+check: ## Runs static checks on the code
 	poetry run pre-commit run --all
 
 test: ## Runs all the tests
