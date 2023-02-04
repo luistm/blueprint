@@ -14,5 +14,5 @@ You will need the following installed in your machine.
 Just run in your project directory:
 
 ```bash
- poetry up --latest
+ poetry up --pinned --latest
 ```
