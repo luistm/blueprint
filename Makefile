@@ -28,6 +28,11 @@ check: ## Runs static checks on the code
 test: ## Runs all the tests
 	poetry run pytest .
 
+coverage: ## Shows coverage in the browser
+	poetry run coverage run -m pytest .
+	poetry run coverage html
+	open htmlcov/index.html
+
 build:  ## Builds this project into a package
 	poetry build
 
