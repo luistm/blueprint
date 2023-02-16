@@ -33,7 +33,12 @@ coverage: ## Shows coverage in the browser
 	poetry run coverage html
 	open htmlcov/index.html
 
+future: ## Tests the code against multiple python versions
+	poetry export -f requirements.txt --output requirements.txt
+	poetry run nox
+	-rm requirements.txt
+
 build:  ## Builds this project into a package
 	poetry build
 
-all: clean setup check test build deps-outdated
+all: clean setup check test future build deps-outdated
