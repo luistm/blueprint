@@ -17,7 +17,7 @@ clean: ## Resets the development environment to the initial state
 	-find . -name "*.pyc" -delete
 	-rm requirements.txt
 	-rm dist/${PROJECT_NAME}*
-	-poetry env remove python --quiet
+	-poetry env remove --quiet --all
 
 setup: deps ## Sets up the developement environment
 	poetry run pre-commit install
@@ -34,7 +34,7 @@ coverage: ## Shows coverage in the browser
 	open htmlcov/index.html
 
 future: ## Tests the code against multiple python versions
-	poetry export -f requirements.txt --output requirements.txt
+	poetry export -f requirements.txt --output requirements.txt --with dev
 	poetry run nox
 	-rm requirements.txt
 
