@@ -25,8 +25,16 @@ setup: deps ## Sets up the developement environment
 check: ## Runs static checks on the code
 	poetry run pre-commit run --all
 
-test: ## Runs all the tests
-	poetry run pytest .
+unit-tests: ## Runs the unit tests
+	poetry run pytest ./src  -svv -m "not integration"
+
+integration-tests: ## Runs the integration tests
+	poetry run pytest ./src  -svv -m "integration"
+
+acceptance-tests: ## Runs the acceptance tests
+	poetry run pytest ./features  -svv
+	
+test: unit-tests integration-tests acceptance-tests  ## Runs all the tests
 
 coverage: ## Shows coverage in the browser
 	poetry run coverage run -m pytest .
