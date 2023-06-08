@@ -34,7 +34,7 @@ integration-tests: ## Runs the integration tests
 acceptance-tests: ## Runs the acceptance tests
 	poetry run pytest ./features  -svv
 	
-test: unit-tests integration-tests acceptance-tests  ## Runs all the tests
+tests: unit-tests integration-tests acceptance-tests  ## Runs all the tests
 
 coverage: ## Shows coverage in the browser
 	poetry run coverage run -m pytest .
@@ -49,4 +49,4 @@ future: ## Tests the code against multiple python versions
 build:  ## Builds this project into a package
 	poetry build
 
-all: clean setup check test future build deps-outdated
+all: clean setup check tests future build deps-outdated
