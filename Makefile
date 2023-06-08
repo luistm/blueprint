@@ -49,4 +49,4 @@ future: ## Tests the code against multiple python versions
 build:  ## Builds this project into a package
 	poetry build
 
-all: clean setup check tests future build deps-outdated
+all: clean setup check tests future
