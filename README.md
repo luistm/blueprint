@@ -25,9 +25,9 @@ Just run in your project directory:
 3. Run this command to replace all instances of the template name with your
    project name within each file:
 
-```bash
-sed -i 's/cakemold/your-project-name/g' **/*.*
-```
+   ```bash
+   sed -i 's/cakemold/your-project-name/g' **/*.*
+   ```
 
 4. Updated the description in `pyproject.toml`.
 5. Update the `README.md` file.
