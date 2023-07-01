@@ -49,4 +49,9 @@ future: ## Tests the code against multiple python versions
 build:  ## Builds this project into a package
 	poetry build
 
+$(PROJECT_NAME):
+	@echo "Running $(PROJECT_NAME) in development mode"
+	poetry install
+	poetry run $(PROJECT_NAME)
+	
 all: clean setup check tests future
