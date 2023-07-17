@@ -18,6 +18,7 @@ clean: ## Resets the development environment to the initial state
 	-rm requirements.txt
 	-rm dist/${PROJECT_NAME}*
 	-poetry env remove --quiet --all
+	-rm -rf build
 
 setup: deps ## Sets up the developement environment
 	poetry run pre-commit install
