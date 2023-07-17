@@ -96,6 +96,7 @@ packaging = ">=22.0"
 pathspec = ">=0.9.0"
 platformdirs = ">=2"
 tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
+typing-extensions = {version = ">=3.10.0.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
 colorama = ["colorama (>=0.4.3)"]
@@ -954,5 +955,5 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "9684f761ef1cfac90641aed9091affcde49e56eaca7cbcdf4d70aafef4cfcbd9"
+python-versions = "^3.9"
+content-hash = "9193958bce702b7480c6de624dae313d39c873375e2bf2459ee30adfdf7adde2"
