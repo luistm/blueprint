@@ -22,6 +22,7 @@ authors = ["Luís Miranda <luistm@gmail.com>"]
 license = "The Unlicence"
 readme = "README.md"
 packages = [{ include = "cakemold", from = "src" }]
+exclude = ["**/*_test.py"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
