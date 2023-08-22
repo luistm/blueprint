@@ -20,6 +20,11 @@ clean: ## Resets the development environment to the initial state
 	-rm dist/${PROJECT_NAME}*
 	-poetry env remove --quiet --all
 	-rm -rf build
+	-rm -rf .mypy_cache
+	-rm -rf .nox
+	-rm -rf .pytest_cache
+	-rm -r .coverage
+	-rm -r htmlcov
 
 setup: deps ## Sets up the developement environment
 	poetry run pre-commit install
