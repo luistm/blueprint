@@ -15,6 +15,7 @@ deps-outdated: ## Shows outdated dependencies
 
 clean: ## Resets the development environment to the initial state
 	-find . -name "*.pyc" -delete
+	find . -type d -name '__pycache__' -exec rm -r {} +
 	-rm requirements.txt
 	-rm dist/${PROJECT_NAME}*
 	-poetry env remove --quiet --all
