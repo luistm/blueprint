@@ -7,6 +7,8 @@ help:
 	@# Got it from here: https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+# Dependency Management ---------------------------------------------------------------------------
+
 deps: ## Installs project dependencies
 	poetry install --no-root
 
@@ -16,24 +18,17 @@ deps-outdated: ## Shows outdated dependencies
 updatelatest: ## Update dependencies to latest available compatible versions
 	poetry up --pinned --latest
 
-clean: ## Resets the development environment to the initial state
-	-find . -name "*.pyc" -delete
-	find . -type d -name '__pycache__' -exec rm -r {} +
-	-rm requirements.txt
-	-rm dist/${PROJECT_NAME}*
-	-poetry env remove --quiet --all
-	-rm -rf build
-	-rm -rf .mypy_cache
-	-rm -rf .nox
-	-rm -rf .pytest_cache
-	-rm -r .coverage
-	-rm -r htmlcov
+# Configuration -----------------------------------------------------------------------------------
 
 setup: deps ## Sets up the developement environment
 	poetry run pre-commit install
 
+# Static checks -----------------------------------------------------------------------------------
+
 check: ## Runs static checks on the code
 	poetry run pre-commit run --all
+
+# Tests -------------------------------------------------------------------------------------------
 
 unit-tests: ## Runs the unit tests
 	poetry run pytest ./src  -svv -m "not integration"
@@ -56,6 +51,8 @@ future: ## Tests the code against multiple python versions
 	poetry run nox
 	-rm requirements.txt
 
+# Packaging ---------------------------------------------------------------------------------------
+
 build:  ## Builds this project into a package
 	poetry build
 
@@ -63,5 +60,22 @@ $(PROJECT_NAME):
 	@echo "Running $(PROJECT_NAME) in development mode"
 	poetry install
 	poetry run $(PROJECT_NAME)
-	
+
+# Cleanup -----------------------------------------------------------------------------------------
+
+clean: ## Resets the development environment to the initial state
+	-find . -name "*.pyc" -delete
+	find . -type d -name '__pycache__' -exec rm -r {} +
+	-rm requirements.txt
+	-rm dist/${PROJECT_NAME}*
+	-poetry env remove --quiet --all
+	-rm -rf build
+	-rm -rf .mypy_cache
+	-rm -rf .nox
+	-rm -rf .pytest_cache
+	-rm -r .coverage
+	-rm -r htmlcov
+
+# Misc --------------------------------------------------------------------------------------------
+
 all: clean setup check tests future
