@@ -15,7 +15,7 @@ You will need the following installed in your machine.
 Just run in your project directory:
 
 ```bash
- poetry up --pinned --latest
+make updatelatest
 ```
 
 ## How to use ?

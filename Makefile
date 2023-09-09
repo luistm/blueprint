@@ -13,6 +13,9 @@ deps: ## Installs project dependencies
 deps-outdated: ## Shows outdated dependencies
 	poetry show --outdated
 
+updatelatest: ## Update dependencies to latest available compatible versions
+	poetry up --pinned --latest
+
 clean: ## Resets the development environment to the initial state
 	-find . -name "*.pyc" -delete
 	find . -type d -name '__pycache__' -exec rm -r {} +
