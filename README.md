@@ -33,6 +33,10 @@ make updatelatest
 5. Update the `README.md` file.
 6. Rename the `cakemold` directory in the `src` directory to your project name.
 
+## Code Style
+
+Just let [Black](https://github.com/psf/black) do it's magic.
+
 ## Other notes
 
 If you are using a mac, you may need to install `gnu-sed` to run the above sed.
