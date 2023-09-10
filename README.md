@@ -4,19 +4,12 @@ Cake Mold is a template to build python projects.
 
 ## Requirements
 
-You will need the following installed in your machine.
+In order to use this templace, you will need the following installed in your
+machine:
 
 - [Poetry](https://python-poetry.org)
 - [Poetry Plugin: Export](https://github.com/python-poetry/poetry-plugin-export)
 - [Poetry Plugin: up](https://github.com/MousaZeidBaker/poetry-plugin-up)
-
-## How to update all dependencies ?
-
-Just run in your project directory:
-
-```bash
-make updatelatest
-```
 
 ## How to use ?
 
@@ -32,6 +25,14 @@ make updatelatest
 4. Updated the description in `pyproject.toml`.
 5. Update the `README.md` file.
 6. Rename the `cakemold` directory in the `src` directory to your project name.
+
+## How to update all dependencies ?
+
+Just run in your project directory:
+
+```bash
+make updatelatest
+```
 
 ## Code Style
 
