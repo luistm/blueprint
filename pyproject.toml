@@ -30,7 +30,7 @@ python = "^3.9"
 [tool.poetry.group.dev.dependencies]
 bandit = { extras = ["toml"], version = "^1.7.5" }
 behave = "^1.2.6"
-black = "^23.9.0"
+black = "^23.9.1"
 coverage = "^7.3.1"
 flake8 = "^6.1.0"
 isort = "^5.12.0"
