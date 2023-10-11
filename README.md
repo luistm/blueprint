@@ -1,6 +1,6 @@
-# Cake Mold
+# Blueprint
 
-Cake Mold is a template to build python projects.
+A template to build python projects.
 
 ## Requirements
 
@@ -19,12 +19,12 @@ machine:
    project name within each file:
 
    ```bash
-   sed -i 's/cakemold/your-project-name/g' **/*.*
+   sed -i 's/blueprint/your-project-name/g' **/*.*
    ```
 
 4. Updated the description in `pyproject.toml`.
 5. Update the `README.md` file.
-6. Rename the `cakemold` directory in the `src` directory to your project name.
+6. Rename the `blueprint` directory in the `src` directory to your project name.
 
 ## How to update all dependencies ?
 

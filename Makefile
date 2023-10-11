@@ -38,7 +38,7 @@ integration-tests: ## Runs the integration tests
 	poetry run pytest ./src  -svv -m "integration"
 
 acceptance-tests: ## Runs the acceptance tests
-	poetry run pytest ./features  -svv
+	poetry run pytest ./tests  -svv
 	
 tests: unit-tests integration-tests acceptance-tests  ## Runs all the tests
 
