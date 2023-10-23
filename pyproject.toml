@@ -19,7 +19,7 @@ name = "blueprint"
 version = "0.0.1"
 description = "A template to build python projects"
 authors = ["Luís Miranda <luistm@gmail.com>"]
-license = "The Unlicence"
+license = "The Unlicense"
 readme = "README.md"
 packages = [{ include = "blueprint", from = "src" }]
 exclude = ["**/*_test.py"]
