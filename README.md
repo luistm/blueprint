@@ -4,7 +4,7 @@ A template to build Python projects.
 
 ## Requirements
 
-In order to use this template, you will need to use Python 3.10 or above and have the 
+In order to use this template, you will need to use Python 3.10 or above and have the
 following tools installed in your machine:
 
 - [Poetry](https://python-poetry.org)
@@ -22,7 +22,7 @@ pip install poetry poetry-plugin-export poetry-plugin-up
 1. Clone this repository.
 2. Rename the repository directory to your project's name.
 3. Run this command to replace all instances of the template's name with your
-   project's name within each file (if you're on a Mac read [Other notes](#other-notes) below: 
+   project's name within each file (if you're on a Mac read [Other notes](#other-notes) below:
 
    ```bash
    sed -i 's/blueprint/your-project-name/g' **/*.*
@@ -53,6 +53,7 @@ You can install it using [Homebrew](http://brew.sh):
 ```bash
 brew install gnu-sed
 ```
+
 Read Homebrew's logs to confirm how to run gnu-sed:
 
 ```bash
@@ -66,5 +67,5 @@ to your PATH from your bashrc like:
 For instance, if you get the above message, you can now run the `sed` command like this:
 
 ```bash
-gsed -i 's/blueprint/ubimarketplace/g' **/*.*
+gsed -i 's/blueprint/your-project-name/g' **/*.*
 ```
