@@ -1,50 +1,84 @@
-# Blueprint
+# Python Project Blueprint
 
-A template to build Python projects.
+A template to kickstart your Python projects with ease and consistency.
 
-## Requirements
+# Introduction 
 
-In order to use this template, you will need to use Python 3.10 or above and have the
-following tools installed in your machine:
+## Installation
 
-- [Poetry](https://python-poetry.org)
+To use this template, you need the following tools installed on your machine:
+
+- [Poetry](https://python-poetry.org) for Python package management.
 - [Poetry Plugin: Export](https://github.com/python-poetry/poetry-plugin-export)
+for exporting dependencies.
 - [Poetry Plugin: up](https://github.com/MousaZeidBaker/poetry-plugin-up)
+for updating dependencies.
+
+Ensure you have Python 3.10 or above installed by running:
 
 ```bash
 python --version
 # Python 3.10.9
+```
+
+To install the required tools, run:
+
+```bash
 pip install poetry poetry-plugin-export poetry-plugin-up
 ```
 
-## How to use the blueprint?
+## Usage
 
 1. Clone this repository.
 2. Rename the repository directory to your project's name.
-3. Run this command to replace all instances of the template's name with your
-   project's name within each file (if you're on a Mac read [Other notes](#other-notes) below:
+3. Run the following command to replace instances of "blueprint" with your
+   project's name:
 
    ```bash
    sed -i 's/blueprint/your-project-name/g' **/*.*
    ```
 
-4. Update the name, author, and description in the `pyproject.toml` file.
-5. Update the `README.md` file with content relevant to your project.
-6. Rename the `blueprint` directory within the `src` directory with `your-project-name`.
+   🚨 If you're on a Mac, please read [Other notes](#other-notes) below.
+
+4. Update the project's information in the `pyproject.toml` file, such as the
+   name, author, and description
+6. Customise the `README.md` with content relevant to your project.
+7. Rename the `blueprint` directory within the `src` directory with your
+   project's name.
+
+# Configuration
 
 ## How to update all the dependencies?
 
-Just run the following command in your project directory:
+Regularly updating project dependencies is crucial for ensuring your project 
+stays secure and up-to-date with the latest features and bug fixes. To update 
+all your project dependencies, simply run the following command in your 
+project directory:
 
 ```bash
 make updatelatest
 ```
 
-## Code style
+This command leverages the power of Poetry and its plugins to update your 
+dependencies efficiently. It helps prevent security vulnerabilities and keeps 
+your project aligned with the ever-evolving Python ecosystem. By keeping your 
+dependencies up to date, you ensure that your project remains maintainable and 
+robust in the long run.
 
-Just let [Black](https://github.com/psf/black) do its magic.
+## Code Style
 
-## Other notes
+This project enforces a consistent and clean code style using 
+[Black](https://github.com/psf/black), a highly regarded Python code formatter. 
+[Black](https://github.com/psf/black) ensures that your code remains neatly formatted 
+and follows the Python Enhancement Proposals (PEP 8) style guide. To automatically 
+format your code according to the project's coding style, simply run the following 
+command in your project directory:
+
+```bash
+black .
+```
+
+# Other notes
 
 If you use a Mac, you may need to install `gnu-sed` to run the above `sed` command.
 
@@ -69,3 +103,15 @@ For instance, if you get the above message, you can now run the `sed` command li
 ```bash
 gsed -i 's/blueprint/your-project-name/g' **/*.*
 ```
+
+# License and Contribution Guidelines:
+
+This project is released under the [Unlicense](https://unlicense.org/), which 
+essentially places it in the public domain. You are free to use, modify, and distribute 
+this code as you see fit, with no restrictions. Please keep in mind that, since this 
+project is unlicensed, there are no warranties or guarantees, and you are responsible 
+for any legal implications of using the code.
+
+If you wish to contribute to this project, we welcome your input. Feel free to submit 
+issues or pull requests through GitHub. Your contributions are highly valued and appreciated.
+
