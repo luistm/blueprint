@@ -30,8 +30,12 @@ pip install poetry poetry-plugin-export poetry-plugin-up
 ## Usage
 
 1. Clone this repository.
-2. Rename the repository directory to your project's name.
-3. Run the following command to replace instances of "blueprint" with your
+
+```bash
+https://github.com/Not-a-Number-Developers/blueprint.git
+```
+3. Rename the repository directory to your project's name.
+4. Run the following command to replace instances of "blueprint" with your
    project's name:
 
    ```bash
@@ -40,7 +44,7 @@ pip install poetry poetry-plugin-export poetry-plugin-up
 
    🚨 If you're on a Mac, please read [Other notes](#other-notes) below.
 
-4. Update the project's information in the `pyproject.toml` file, such as the
+5. Update the project's information in the `pyproject.toml` file, such as the
    name, author, and description
 6. Customise the `README.md` with content relevant to your project.
 7. Rename the `blueprint` directory within the `src` directory with your
