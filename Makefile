@@ -3,10 +3,29 @@
 
 PROJECT_NAME=$(shell grep "name" pyproject.toml | cut -d "\"" -f 2)
 
+# Misc --------------------------------------------------------------------------------------------
+
+all: clean setup check tests future
+
 help:
 	@# Got it from here: https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; \
 	{printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+# Cleanup -----------------------------------------------------------------------------------------
+
+clean: ## Resets the development environment to the initial state
+	-find . -name "*.pyc" -delete
+	find . -type d -name '__pycache__' -exec rm -r {} +
+	-rm requirements.txt
+	-rm dist/${PROJECT_NAME}*
+	-poetry env remove --quiet --all
+	-rm -rf build
+	-rm -rf .mypy_cache
+	-rm -rf .nox
+	-rm -rf .pytest_cache
+	-rm -r .coverage
+	-rm -r htmlcov
 
 # Dependency Management ---------------------------------------------------------------------------
 
@@ -62,21 +81,3 @@ $(PROJECT_NAME):
 	poetry install
 	poetry run $(PROJECT_NAME)
 
-# Cleanup -----------------------------------------------------------------------------------------
-
-clean: ## Resets the development environment to the initial state
-	-find . -name "*.pyc" -delete
-	find . -type d -name '__pycache__' -exec rm -r {} +
-	-rm requirements.txt
-	-rm dist/${PROJECT_NAME}*
-	-poetry env remove --quiet --all
-	-rm -rf build
-	-rm -rf .mypy_cache
-	-rm -rf .nox
-	-rm -rf .pytest_cache
-	-rm -r .coverage
-	-rm -r htmlcov
-
-# Misc --------------------------------------------------------------------------------------------
-
-all: clean setup check tests future
