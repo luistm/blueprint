@@ -1,4 +1,4 @@
-# Python Project Blueprint
+# Blueprint: a python project template
 
 A template to kickstart your Python projects with ease and consistency.
 
