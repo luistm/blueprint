@@ -2,17 +2,17 @@
 
 A template to kickstart your Python projects with ease and consistency.
 
-# Introduction 
+## Introduction
 
-## Installation
+### Installation
 
 To use this template, you need the following tools installed on your machine:
 
 - [Poetry](https://python-poetry.org) for Python package management.
 - [Poetry Plugin: Export](https://github.com/python-poetry/poetry-plugin-export)
-for exporting dependencies.
+  for exporting dependencies.
 - [Poetry Plugin: up](https://github.com/MousaZeidBaker/poetry-plugin-up)
-for updating dependencies.
+  for updating dependencies.
 
 Ensure you have Python 3.10 or above installed by running:
 
@@ -21,13 +21,7 @@ python --version
 # Python 3.10.9
 ```
 
-To install the required tools, run:
-
-```bash
-pip install poetry poetry-plugin-export poetry-plugin-up
-```
-
-## Usage
+### Usage
 
 1. Clone this repository.
 2. Rename the repository directory to your project's name.
@@ -42,43 +36,43 @@ pip install poetry poetry-plugin-export poetry-plugin-up
 
 4. Update the project's information in the `pyproject.toml` file, such as the
    name, author, and description
-6. Customise the `README.md` with content relevant to your project.
-7. Rename the `blueprint` directory within the `src` directory with your
+5. Customise the `README.md` with content relevant to your project.
+6. Rename the `blueprint` directory within the `src` directory with your
    project's name.
 
-# Configuration
+## Configuration
 
-## How to update all the dependencies?
+### How to update all the dependencies?
 
-Regularly updating project dependencies is crucial for ensuring your project 
-stays secure and up-to-date with the latest features and bug fixes. To update 
-all your project dependencies, simply run the following command in your 
+Regularly updating project dependencies is crucial for ensuring your project
+stays secure and up-to-date with the latest features and bug fixes. To update
+all your project dependencies, simply run the following command in your
 project directory:
 
 ```bash
 make updatelatest
 ```
 
-This command leverages the power of Poetry and its plugins to update your 
-dependencies efficiently. It helps prevent security vulnerabilities and keeps 
-your project aligned with the ever-evolving Python ecosystem. By keeping your 
-dependencies up to date, you ensure that your project remains maintainable and 
+This command leverages the power of Poetry and its plugins to update your
+dependencies efficiently. It helps prevent security vulnerabilities and keeps
+your project aligned with the ever-evolving Python ecosystem. By keeping your
+dependencies up to date, you ensure that your project remains maintainable and
 robust in the long run.
 
-## Code Style
+### Code Style
 
-This project enforces a consistent and clean code style using 
-[Black](https://github.com/psf/black), a highly regarded Python code formatter. 
-[Black](https://github.com/psf/black) ensures that your code remains neatly formatted 
-and follows the Python Enhancement Proposals (PEP 8) style guide. To automatically 
-format your code according to the project's coding style, simply run the following 
+This project enforces a consistent and clean code style using
+[Black](https://github.com/psf/black), a highly regarded Python code formatter.
+[Black](https://github.com/psf/black) ensures that your code remains neatly formatted
+and follows the Python Enhancement Proposals (PEP 8) style guide. To automatically
+format your code according to the project's coding style, simply run the following
 command in your project directory:
 
 ```bash
 black .
 ```
 
-# Other notes
+## Other notes
 
 If you use a Mac, you may need to install `gnu-sed` to run the above `sed` command.
 
@@ -104,14 +98,13 @@ For instance, if you get the above message, you can now run the `sed` command li
 gsed -i 's/blueprint/your-project-name/g' **/*.*
 ```
 
-# License and Contribution Guidelines:
+## License and Contribution Guidelines
 
-This project is released under the [Unlicense](https://unlicense.org/), which 
-essentially places it in the public domain. You are free to use, modify, and distribute 
-this code as you see fit, with no restrictions. Please keep in mind that, since this 
-project is unlicensed, there are no warranties or guarantees, and you are responsible 
+This project is released under the [Unlicense](https://unlicense.org/), which
+essentially places it in the public domain. You are free to use, modify, and distribute
+this code as you see fit, with no restrictions. Please keep in mind that, since this
+project is unlicensed, there are no warranties or guarantees, and you are responsible
 for any legal implications of using the code.
 
-If you wish to contribute to this project, we welcome your input. Feel free to submit 
+If you wish to contribute to this project, we welcome your input. Feel free to submit
 issues or pull requests through GitHub. Your contributions are highly valued and appreciated.
-
