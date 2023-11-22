@@ -40,6 +40,8 @@ python --version
 6. Rename the `blueprint` directory within the `src` directory with your
    project's name.
 
+Type `make` in the project root to see the available commands.
+
 ## Configuration
 
 ### How to update all the dependencies?
