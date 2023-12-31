@@ -30,15 +30,15 @@ python = "^3.10"
 [tool.poetry.group.dev.dependencies]
 bandit = { extras = ["toml"], version = "^1.7.6" }
 behave = "^1.2.6"
-black = "^23.11.0"
-coverage = "^7.3.2"
+black = "^23.12.1"
+coverage = "^7.4.0"
 flake8 = "^6.1.0"
-ipython = "^8.18.1"
-isort = "^5.13.1"
-mypy = "^1.7.1"
+ipython = "^8.19.0"
+isort = "^5.13.2"
+mypy = "^1.8.0"
 nox = "^2023.4.22"
 pre-commit = "^3.6.0"
-pytest = "^7.4.3"
+pytest = "^7.4.4"
 pytest-xdist = "^3.5.0"
 
 [tool.pytest.ini_options]
