@@ -40,7 +40,7 @@ updatelatest: ## Update dependencies to latest available compatible versions
 
 # Configuration -----------------------------------------------------------------------------------
 
-setup: deps ## Sets up the developement environment
+setup: deps ## Sets up the development environment
 	poetry run pre-commit install
 
 # Static checks -----------------------------------------------------------------------------------
