@@ -28,7 +28,7 @@ exclude = ["**/*_test.py"]
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
-bandit = { extras = ["toml"], version = "^1.7.6" }
+bandit = { extras = ["toml"], version = "^1.7.7" }
 behave = "^1.2.6"
 black = "^23.12.1"
 coverage = "^7.4.0"
