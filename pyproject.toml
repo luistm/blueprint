@@ -28,17 +28,17 @@ exclude = ["**/*_test.py"]
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
-bandit = { extras = ["toml"], version = "^1.7.7" }
+bandit = { extras = ["toml"], version = "^1.7.8" }
 behave = "^1.2.6"
-black = "^24.2.0"
-coverage = "^7.4.3"
+black = "^24.3.0"
+coverage = "^7.4.4"
 flake8 = "^7.0.0"
-ipython = "^8.22.1"
+ipython = "^8.22.2"
 isort = "^5.13.2"
-mypy = "^1.8.0"
+mypy = "^1.9.0"
 nox = "^2024.3.2"
-pre-commit = "^3.6.2"
-pytest = "^8.1.0"
+pre-commit = "^3.7.0"
+pytest = "^8.1.1"
 pytest-xdist = "^3.5.0"
 
 [tool.pytest.ini_options]
