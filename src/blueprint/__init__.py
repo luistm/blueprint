@@ -1,3 +1,3 @@
 """
-Business Logic.
+Place your logic in this package.
 """
