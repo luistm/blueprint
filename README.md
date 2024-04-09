@@ -14,11 +14,11 @@ To use this template, you need the following tools installed on your machine:
 - [Poetry Plugin: up](https://github.com/MousaZeidBaker/poetry-plugin-up)
   for updating dependencies.
 
-Ensure you have Python 3.10 or above installed by running:
+Ensure you have Python 3.9 or above installed by running:
 
 ```bash
 python --version
-# Python 3.10.9
+# Python 3.9.x
 ```
 
 ### Usage
