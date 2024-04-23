@@ -1,4 +1,5 @@
 {
+	"name": "Blueprint based application dev container",
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"features": {
 		"ghcr.io/natescherer/devcontainers-custom-features/hypermodern-python:1": {
