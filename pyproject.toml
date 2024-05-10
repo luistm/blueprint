@@ -30,7 +30,7 @@ python = "^3.9"
 [tool.poetry.group.dev.dependencies]
 bandit = { extras = ["toml"], version = "^1.7.8" }
 black = "^24.4.2"
-coverage = "^7.5.0"
+coverage = "^7.5.1"
 flake8 = "^7.0.0"
 ipython = [
     {version = "^8.18.1", python = ">=3.9,<3.10"},
@@ -40,8 +40,8 @@ isort = "^5.13.2"
 mypy = "^1.10.0"
 nox = "^2024.4.15"
 pre-commit = "^3.7.0"
-pytest = "^8.1.2"
-pytest-xdist = "^3.5.0"
+pytest = "^8.2.0"
+pytest-xdist = "^3.6.1"
 
 [tool.pytest.ini_options]
 markers = ["integration: tags a test as integration tests"]
