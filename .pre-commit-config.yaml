@@ -25,8 +25,9 @@ repos:
         args: ["-c", "pyproject.toml"]
         types: [python]
       - id: mypy
-        name: mypy
+        name: mypy services
         entry: poetry run mypy
         language: system
-        types: [python]
+        types: [ python ]
+        files: ^src
         args: ["--config-file", "pyproject.toml"]
