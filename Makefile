@@ -35,8 +35,12 @@ deps: ## Installs project dependencies
 deps-outdated: ## Shows outdated dependencies
 	poetry show --outdated
 
-updatelatest: ## Update dependencies to latest available compatible versions
+update-latest: ## Update dependencies to latest available compatible versions
 	poetry up --pinned --latest
+
+deps-update-and-commit:  update-latest ## Update and commit dependencies
+	git add .
+	git commit -m "Update  dependencies to latest available compatible versions"
 
 # Configuration -----------------------------------------------------------------------------------
 
